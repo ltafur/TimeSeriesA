@@ -1,0 +1,17 @@
+fig:nice-fig
+tab:nice-tab
+prerequisites
+intro
+literature
+methods
+math-example
+applications
+example-one
+example-two
+final-words
+título-autor-y-descripción
+propuesta
+tipo-de-información-para-análisis-temporal
+importancia-del-pronóstoc-de-inventarios
+los-datos-de-inventario-disponibles
+importancia-del-pronóstico-de-inventarios

@@ -1,0 +1,24 @@
+---
+title: "Análisis de Series de Tiempo de Productos de Inventario en Empresa TI"
+author: "Luis Alberto Tafur Jiménez"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/TimeSeriesA
+description: "Proyecto de clase de Análisis de Series de Tiempo de la Maestria en Ciencia de Datos"
+---
+
+# Título, autor y descripción
+
+Proyecto de clase de Análisis de Series de Tiempo de la Maestria en Ciencia de Datos
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
