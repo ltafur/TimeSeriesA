@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Propuesta | Análisis de Series de Tiempo de Productos de Inventario en Empresa TI</title>
+  <meta name="description" content="Proyecto de clase de Análisis de Series de Tiempo de la Maestria en Ciencia de Datos" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Propuesta | Análisis de Series de Tiempo de Productos de Inventario en Empresa TI" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Proyecto de clase de Análisis de Series de Tiempo de la Maestria en Ciencia de Datos" />
+  <meta name="github-repo" content="rstudio/TimeSeriesA" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Propuesta | Análisis de Series de Tiempo de Productos de Inventario en Empresa TI" />
+  
+  <meta name="twitter:description" content="Proyecto de clase de Análisis de Series de Tiempo de la Maestria en Ciencia de Datos" />
+  
+
+<meta name="author" content="Luis Alberto Tafur Jiménez" />
+
+
+<meta name="date" content="2024-04-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Título, autor y descripción</a></li>
+<li class="chapter" data-level="2" data-path="propuesta.html"><a href="propuesta.html"><i class="fa fa-check"></i><b>2</b> Propuesta</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="propuesta.html"><a href="propuesta.html#tipo-de-información-para-análisis-temporal"><i class="fa fa-check"></i><b>2.1</b> Tipo de información para análisis temporal</a></li>
+<li class="chapter" data-level="2.2" data-path="propuesta.html"><a href="propuesta.html#importancia-del-pronóstico-de-inventarios"><i class="fa fa-check"></i><b>2.2</b> Importancia del pronóstico de inventarios</a></li>
+<li class="chapter" data-level="2.3" data-path="propuesta.html"><a href="propuesta.html#los-datos-de-inventario-disponibles"><i class="fa fa-check"></i><b>2.3</b> Los datos de inventario disponibles</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Series de Tiempo de Productos de Inventario en Empresa TI</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="propuesta" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Propuesta<a href="propuesta.html#propuesta" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="tipo-de-información-para-análisis-temporal" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Tipo de información para análisis temporal<a href="propuesta.html#tipo-de-información-para-análisis-temporal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El tipo de información que se propone analizar son datos de “Inventario”. Este tipo de datos se refiere a una colección de artículos que una empresa tiene en su poder, normalmente con el fin comercializarlos. La gestión del inventario de forma eficaz es crucial para que las empresas puedan asegurar que tienen suficientes existencias que satisfagan la demanda pero sin exceso de las mismas, ya que esto último inmoviliza el capital y genera costos de almacenamiento. Entre los aspectos clave de este tipo de datos se tienen:</p>
+<p>La identificación de artículos: Cada artículo en un inventario generalmente se identifica de forma única, a menudo con un SKU (Unidad de mantenimiento de existencias).
+La cantidad: Se realiza un seguimiento de la cantidad de cada artículo en stock. Esto puede ser tan simple como un recuento de artículos individuales o más complejo, teniendo en cuenta diferentes unidades de medida o sus ubicaciones.
+El valor: El valor del inventario es importante para la presentación de informes financieros y la toma de decisiones. Esto puede basarse en varios métodos de valoración, como FIFO (primero en entrar, primero en salir), LIFO (último en entrar, primero en salir) o costo promedio ponderado.
+La clasificación: los artículos en el inventario se pueden clasificar según varios criterios, como tipo, categoría o velocidad de la demanda (por ejemplo, de movimiento rápido, de movimiento lento u obsoletos).
+El seguimiento de movimientos: es necesario realizar un seguimiento de los cambios en los niveles de inventario debido a factores como ventas, compras, devoluciones y ajustes para mantener registros precisos.
+La ubicación de almacenamiento: para inventarios más grandes, saber dónde se encuentra cada artículo dentro de un almacén o centro de distribución es importante para operaciones eficientes.
+Stock de seguridad: muchas empresas mantienen una reserva de inventario adicional llamado stock de seguridad para tener en cuenta la variabilidad en la demanda o los plazos de entrega de los proveedores.
+La rotación de inventario: esta métrica mide la rapidez con la que una empresa vende su inventario y es importante para evaluar la eficiencia y la salud financiera.</p>
+</div>
+<div id="importancia-del-pronóstico-de-inventarios" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Importancia del pronóstico de inventarios<a href="propuesta.html#importancia-del-pronóstico-de-inventarios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El pronóstico de inventario es esencial para que las empresas operen de manera eficiente, reduzcan costos y satisfagan la demanda de los clientes de manera efectiva. Al aprovechar los datos históricos, las tendencias del mercado y las técnicas analíticas avanzadas, las empresas pueden mejorar la precisión de sus pronósticos y obtener una ventaja competitiva en su industria. Para una organización el pronóstico de inventarios es importante por diferentes razones, entre estas se tienen:</p>
+<p>La optimización de los niveles de existencias: el pronóstico ayuda a las empresas a determinar el nivel óptimo de inventario que deben tener disponible. Al predecir con precisión la demanda, las empresas pueden evitar desabastecimientos (quedarse sin inventario) o exceso de inventario.
+La reducción de costos: Mantener el exceso de inventario conlleva costos como espacio de almacenamiento, seguros y posible obsolescencia. Al pronosticar la demanda con precisión, las empresas pueden minimizar estos costos manteniendo solo el inventario que necesitan.
+Un servicio al cliente mejorado: el pronóstico de inventario garantiza que las empresas tengan los productos adecuados disponibles cuando los clientes los quieran. Esto conduce a una mayor satisfacción y lealtad del cliente, ya que es menos probable que los clientes experimenten retrasos o desabastecimientos.
+La planificación de producción eficiente: para las empresas involucradas en la fabricación, una previsión precisa del inventario es esencial para planificar los programas de producción y adquirir materias primas.
+Una mejor gestión del flujo de caja: mantener un exceso de inventario inmoviliza capital que podría utilizarse en otras partes del negocio. Al pronosticar con precisión la demanda, las empresas pueden optimizar sus niveles de inventario y liberar capital de trabajo para otras inversiones o necesidades operativas.
+Una toma de decisiones estratégicas: los pronósticos de inventario brindan información valiosa sobre las tendencias del mercado, la estacionalidad y el comportamiento de los clientes. Esta información se puede utilizar para la toma de decisiones estratégicas, como estrategias de precios, desarrollo de productos y expansión a nuevos mercados.
+La optimización de la cadena de suministro: las previsiones de inventario precisas permiten una mejor coordinación con proveedores y socios logísticos. Esto puede generar ahorros de costos a través de tiempos de entrega reducidos, transporte más eficiente y menores costos de mantenimiento a lo largo de la cadena de suministro.</p>
+</div>
+<div id="los-datos-de-inventario-disponibles" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Los datos de inventario disponibles<a href="propuesta.html#los-datos-de-inventario-disponibles" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Los datos de inventario disponibles para trabajar durante el curso son datos de una empresa TI que fue cliente de la consultora dónde labora actualmente el estudiante. La consultora avala el uso de los datos con fines del ejercicio académico, teniendo como condiciones que el nombre del cliente no sea revelado bajo ninguna circunstancia y que los resultados del análisis no sea publicado o de libre acceso. A continuación, se describe la estructura y aspectos generales sobre los datos de inventario disponibles.</p>
+<p>La temporalidad de los datos se caracteriza por un histórico de datos de los años 2021 y 2022, con una frecuencia diaria. Los históricos de inventarios están organizados en los siguientes conjuntos de datos: Handsets en stock, Handsets en tránsito, Accesorios en stock y Accesorios en tránsito. Los conjuntos de datos tienen los siguientes atributos: Stock Keeping Unit (SKU), Lugar físico de inventario que se compone de SALE_CHANNEL_NAME y SUBINVENTORY para los conjuntos de datos en stock y de los campos TO_LOCATION_ID y SUBINVENTORY para los inventarios en tránsito, la cantidad de SKU denominado QUANTITY_AMOUNT y el campo de fecha (STOCK_INVENTORY_DATE). Respecto a la cantidad de registros según el atributo se tiene lo que se describe a continuación.</p>
+<p>Cantidad de SKUs únicos por inventario de datos:</p>
+<p>Handsets en stock: 4579</p>
+<p>Handsets en tránsito: 3133</p>
+<p>Accesorios en stock: 5537</p>
+<p>Accesorios en tránsito: 4043</p>
+<p>Cantidad de registros únicos para canal de distribución principal:</p>
+<p>Handsets en stock: 1889</p>
+<p>Handsets en tránsito: 1000</p>
+<p>Accesorios en stock: 1896</p>
+<p>Accesorios en tránsito: 1079</p>
+<p>Cantidad de registros únicos para tiendas:</p>
+<p>Handsets en stock: 735</p>
+<p>Handsets en tránsito: 26</p>
+<p>Accesorios en stock: 697</p>
+<p>Accesorios en tránsito: 55</p>
+<p>En su momento, el cliente manifestó que tenía como futuro interés la implementación de modelos de Aprendizaje Automático para el pronóstico de sus inventarios, de manera que se pudieran optimizar los niveles de existencias y, adicionalmente, se pudiera generar valor agregado al negocio respondiendo preguntas como:</p>
+<p>Cómo se va a comportar el inventario en el tiempo por tienda, o ubicación física?</p>
+<p>Cuántas unidades de un SKU se pueden llegar a vender por punto de venta?</p>
+<p>Cuántas semanas de cobertura se pueden estimar a partir del inventario?</p>
+<p>Qué tiendas se van a quedar sin stock para una línea de productos o determinados SKU?</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-propuesta.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
